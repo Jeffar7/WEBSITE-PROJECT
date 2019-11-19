@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="header-footer.css">
+    <link rel="stylesheet" href="contents.css">
+    <script src="script.js"></script>
+    <script src="jquery-3.1.1.js"></script>
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="header">
+        <a href="home.html">
+            <img src="POwithV logo/POwithV-Logo.jpg" alt="POwithV LOGO">
+        </a>
+    </div>
+
+    <div class="navigation">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="#">Products</a>
+                    <ul>
+                        <li><a href="foods.html">Foods</a></li>
+                        <li><a href="medicines.html">Medicines</a></li>
+                    </ul>
+                </li>
+                <li><a href="how-to-order.html">How to Order</a></li>
+                <li><a href="testimonial.html">Testimonial</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="home-main">
+        <div class="home-main-wallpaper">
+            <p id="tag-line">"Your trusted pre-order service"</p>
+            <div class="contact">
+                <a href="https://instagram.com/vick_djk?igshid=ikyqezasrqs2" target="_blank">
+                    <img src="logos/instagram.png" alt="INSTAGRAM">
+                </a>
+                <div class="whatsapp">
+                    <img src="logos/whatsapp.png" alt="WHATSAPP">
+                    <p id="whatsapp-number">+62 81384893193</p>
+                    <p id="number-desc">(as phone number and whatsapp)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1>News</h1>
+            <div class="mySlides fade">
+                <img src="images/give-away.png">
+            </div>
+        </div>
+        <div class="container">
+            <div class="mySlides fade">
+                <img src="images/trip.png">
+            </div>
+        </div>
+        <div class="container">
+            <div class="mySlides fade">
+                <img src="images/discount.jpg">
+            </div>
+        </div>
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+
+        <div class="home-main-products">
+            <a href="foods.html" class="food">
+                <img src="icons/food.png" alt="FOODS">
+                <strong>FOODS</strong>
+            </a>
+            <a href="medicines.html" class="medicine">
+                <img src="icons/medicine.png" alt="MEDICINES">
+                <strong>MEDICINE</strong>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-navigation">
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="#">Products</a>
+                        <ul>
+                            <li><a href="foods.html">Foods</a></li>
+                            <li><a href="medicines.html">Medicines</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="how-to-order.html">How to Order</a></li>
+                    <li><a href="testimonial.html">Testimonial</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="POwithV-logo">
+            <a href="home.html" id="logo">
+                <img src="POwithV logo/POwithV-Logo.jpg" alt="POwithV-Logo">
+            </a>
+            <h5 id="copyright">© 2019 powithv.com</h5>
+        </div>
+
+        <div class="contact">
+            <a href="https://instagram.com/vick_djk?igshid=ikyqezasrqs2" target="_blank">
+                <img src="logos/instagram.png" alt="INSTAGRAM">
+            </a>    
+            <div class="whatsapp">
+                <img src="logos/whatsapp.png" alt="WHATSAPP">
+                <p id="whatsapp-number">+6281384893193</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <h5>© 2019 powithv.com</h5>
+        </div>
+    </div>
+
+    <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 4000);
+    }
+    </script>
+
+</body>
+</html>
